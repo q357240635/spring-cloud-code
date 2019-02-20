@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: standalone
+    active: server1
   jackson:
     serialization:
       FAIL_ON_EMPTY_BEANS: false

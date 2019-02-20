@@ -1,0 +1,15 @@
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    #是否将自己这个服务注册到EurekaServer中,
+    registerWithEureka: false
+#    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/,http://${eureka.instance.hostname}:8762/eureka/,http://${eureka.instance.hostname}:8763/eureka/
+  server:
+      waitTimeInMsWhenSyncEmpty: 0
+      enableSelfPreservation: false
