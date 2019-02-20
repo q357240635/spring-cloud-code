@@ -1,13 +1,11 @@
 server:
-  port: 8761
+  port: 8765
 
 eureka:
   instance:
     hostname: localhost
   client:
-    #是否将自己这个服务注册到EurekaServer中；单机环境中设置为false，集群环境默认。
     registerWithEureka: true
-    #表示是否从Eureka Server获取注册信息；单机环境中设置为false，集群环境默认。
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:8761/eureka/,http://${eureka.instance.hostname}:8762/eureka/,http://${eureka.instance.hostname}:8763/eureka/,http://${eureka.instance.hostname}:8764/eureka/,http://${eureka.instance.hostname}:8765/eureka/

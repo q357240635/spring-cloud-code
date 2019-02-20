@@ -13,8 +13,6 @@ eureka:
     response-cache-auto-expiration-in-seconds: 10
     #主动失效检测间隔,配置成5秒
     eviction-interval-timer-in-ms: 5000
-    #中小规模下，自我保护模式坑比好处多，所以关闭它,(但是关闭了会出现红色提示)
-    enableSelfPreservation: true
 management:
   endpoints:
     web:
