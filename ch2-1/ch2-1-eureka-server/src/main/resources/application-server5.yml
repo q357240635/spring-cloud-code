@@ -3,12 +3,12 @@ server:
 
 eureka:
   instance:
-    hostname: localhost
+    hostname: EurekaServer5
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:8761/eureka/,http://${eureka.instance.hostname}:8762/eureka/,http://${eureka.instance.hostname}:8763/eureka/,http://${eureka.instance.hostname}:8764/eureka/,http://${eureka.instance.hostname}:8765/eureka/
+      defaultZone: http://:EurekaServer1:8761/eureka/,http://EurekaServer2:8762/eureka/,http://EurekaServer3:8763/eureka/,http://EurekaServer4:8764/eureka/,http://EurekaServer5:8765/eureka/
   server:
     waitTimeInMsWhenSyncEmpty: 0
     enableSelfPreservation: true

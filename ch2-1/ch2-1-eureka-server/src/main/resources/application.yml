@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: server1
+    active: dev
   application:
     name: EurekaServer
   jackson:
