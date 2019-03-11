@@ -1,0 +1,18 @@
+server:
+  port: 8761
+
+eureka:
+  instance:
+    # 单机 hostname: localhost #eureka注册中心实例名称
+    hostname: localhost
+  client:
+    #是否将自己这个服务注册到EurekaServer中；单机环境中设置为false，集群环境默认。
+    registerWithEureka: false
+    #表示是否从Eureka Server获取注册信息；单机环境中设置为false，集群环境默认。
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+    #中小规模下，自我保护模式坑比好处多，所以关闭它,(但是关闭了会出现红色提示)
+    enableSelfPreservation: false

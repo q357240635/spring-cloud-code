@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: EurekaServer
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
+eureka:
+  server:
+    #禁用readOnlyCacheMap（中小集群可以直接关闭，但在大集群中建议还是开启，使用eureka.server.responseCacheUpdateInvervalMs=3000进行配置）
+    use-read-only-response-cache: false
+    response-cache-auto-expiration-in-seconds: 10
+    #主动失效检测间隔,配置成5秒
+    eviction-interval-timer-in-ms: 5000
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
